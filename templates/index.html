@@ -16,11 +16,18 @@
 
 <body>
   <div class="main-w3layouts wrapper">
-    <h1><img src="../static/psm100_logo.png" /></h1><br>
+    <h1><img src="../static/psm100_logo.png" width="35%;" /></h1><br>
     <h1 style="color: #9e5213">Guru Vandana SignUp Form</h1><br>
-        <h3 style="color: #9e5213;text-align:center">Sunday, December 12, 2021</h3>
+        <h3 style="color: #9e5213;text-align:center;">Sunday, December 12, 2021</h3>
     <div class="main-agileinfo">
       <div class="agileits-top">
+                {% with messages = get_flashed_messages() %}
+                   {% if messages %}
+                      {% for message in messages %}
+                         <a style='color:#bd0000'>{{ message }}</a>
+                      {% endfor %}
+                   {% endif %}
+                {% endwith %}
                 <form name="myform" method="POST" action="#" >
                     <input id="firstName" name="firstName" type="text" placeholder="First Name" required="">
                     <input id="lastName" name="lastName" type="text" placeholder="Last Name" required="">
@@ -64,6 +71,7 @@
                         </select>
                     </div>
           <input type="submit" value="SIGNUP">
+
         </form>
         
       </div>

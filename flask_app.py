@@ -77,7 +77,7 @@ def index():
 		# Currently just gives an error. no option to update entry
 		exists = db.session.query(Person.email).filter_by(email=email).first() is not None
 		if (exists):
-			flash("Email exists, was not able to add to db")
+			flash("Error: A person with this email was already registered")
 		else:
 			person = Person(firstName = fn,
 					 lastName = ln, 
