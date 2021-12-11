@@ -1,0 +1,37 @@
+<head>
+    <title>Welcome To Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+    	<table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Email (Primary key)</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Num Family Attending</th>
+          <th scope="col">Time Slot</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for e in allPeople %}
+        <tr>
+          <th scope="row">{{loop.index }}</th>
+          <td>{{e.firstName}}</td>
+          <td>{{e.lastName}}</td>
+          <td>{{e.email}}</td>
+          <td>{{e.phone}}</td>
+          <td>{{e.numAttending}}</td>
+          <td>{{e.timeslot//100}}:{{e.timeslot%100}}</td>		
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+	</div>
+</body>
