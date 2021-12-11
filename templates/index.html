@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome To Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+
+      <h2>Registration</h2>
+
+      <form class="form-horizontal" name="myform" method="POST">
+        <fieldset>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for=""></label>  
+          <div class="col-md-4">
+          <input id="firstName" name="firstName" type="text" placeholder="First Name" class="form-control input-md">
+            
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for=""></label>  
+          <div class="col-md-4">
+          <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="form-control input-md">
+            
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for=""></label>  
+          <div class="col-md-4">
+          <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
+            
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for=""></label>  
+          <div class="col-md-4">
+          <input id="phone" name="phone" type="text" placeholder="Phone Number" class="form-control input-md">
+            
+          </div>
+        </div>
+
+        <!-- Multiple Radios (inline) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="numAttending">Number of Family Members Attending</label>
+          <div class="col-md-4">
+            <select id="numAttending" name="numAttending" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="selectbasic">Time Slot</label>
+          <div class="col-md-4">
+            <select id="timeslot" name="timeslot" class="form-control">
+              <option value="1000">10:00 - remaining occupancy {{spaceRemainingPerTS[0]}}</option>
+              <option value="1015">10:15 - remaining occupancy {{spaceRemainingPerTS[1]}}</option>
+              <option value="1030">10:30 - remaining occupancy {{spaceRemainingPerTS[2]}}</option>
+              <option value="1045">10:45 - remaining occupancy {{spaceRemainingPerTS[3]}}</option>
+              <option value="1100">11:00 - remaining occupancy {{spaceRemainingPerTS[4]}}</option>
+              <option value="1115">11:15 - remaining occupancy {{spaceRemainingPerTS[5]}}</option>
+              <option value="1130">11:30 - remaining occupancy {{spaceRemainingPerTS[6]}}</option>
+              <option value="1145">11:45 - remaining occupancy {{spaceRemainingPerTS[7]}}</option>
+              <option value="1200">12:00 - remaining occupancy {{spaceRemainingPerTS[8]}}</option>
+              <option value="1215">12:15 - remaining occupancy {{spaceRemainingPerTS[9]}}</option>
+              <option value="1230">12:30 - remaining occupancy {{spaceRemainingPerTS[10]}}</option>
+              <option value="1245">12:45 - remaining occupancy {{spaceRemainingPerTS[11]}}</option>
+              <option value="0100">01:00 - remaining occupancy {{spaceRemainingPerTS[12]}}</option>
+              <option value="0115">01:15 - remaining occupancy {{spaceRemainingPerTS[13]}}</option>
+              <option value="0130">01:30 - remaining occupancy {{spaceRemainingPerTS[14]}}</option>
+              <option value="0145">01:45 - remaining occupancy {{spaceRemainingPerTS[15]}}</option>
+              <option value="0200">02:00 - remaining occupancy {{spaceRemainingPerTS[16]}}</option>
+              <option value="0215">02:15 - remaining occupancy {{spaceRemainingPerTS[17]}}</option>
+              <option value="0230">02:30 - remaining occupancy {{spaceRemainingPerTS[18]}}</option>
+              <option value="0245">02:45 - remaining occupancy {{spaceRemainingPerTS[19]}}</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {% with messages = get_flashed_messages() %}
+           {% if messages %}
+              {% for message in messages %}
+                 <a style='color:red'>{{ message }}</a>
+              {% endfor %}
+           {% endif %}
+        {% endwith %}
+        </fieldset>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    function cleanUpPhoneNo(sel) {
+        text = sel.value.toString();
+        text = text.replace(/\D/g, '');
+        text = text.replace(/(\d{3})(\d{3})(\d{4})/, "($1)-$2-$3");
+        $('input[name=phone_no]').val(text);
+    }
+
+    </script>
+</body>
+
+</html>
