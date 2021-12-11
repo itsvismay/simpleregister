@@ -5,18 +5,84 @@
     <title>Welcome To Registration Form</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom Theme files -->
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- //web font -->
     
 </head>
 
 <body>
-    <div class="container">
-
-      <h2>Registration</h2>
+  <div class="main-w3layouts wrapper">
+    <h1><img src="../static/psm100_logo.png" /></h1><br>
+    <h1 style="color: #9e5213">Guru Vandana SignUp Form</h1><br>
+        <h3 style="color: #9e5213;text-align:center">Sunday, December 12, 2021</h3>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+                <form name="myform" method="POST" action="#" >
+                    <input id="firstName" name="firstName" type="text" placeholder="First Name" required="">
+                    <input id="lastName" name="lastName" type="text" placeholder="Last Name" required="">
+                    <input id="email" name="email" type="text" placeholder="Email Address" required="">
+                    <input id="phone" name="phone" type="text" placeholder="Phone Number" required="">
+                    <label style="color:white" class="control-label" for="numAttending">Number of Family Members Attending</label>
+                    <div class="">
+                        <select id="numAttending" name="numAttending" class="form-control">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                        <select id="timeslot" name="timeslot" class="form-control">
+                          <option value="1000">10:00 - remaining occupancy {{spaceRemainingPerTS[0]}}</option>
+                          <option value="1015">10:15 - remaining occupancy {{spaceRemainingPerTS[1]}}</option>
+                          <option value="1030">10:30 - remaining occupancy {{spaceRemainingPerTS[2]}}</option>
+                          <option value="1045">10:45 - remaining occupancy {{spaceRemainingPerTS[3]}}</option>
+                          <option value="1100">11:00 - remaining occupancy {{spaceRemainingPerTS[4]}}</option>
+                          <option value="1115">11:15 - remaining occupancy {{spaceRemainingPerTS[5]}}</option>
+                          <option value="1130">11:30 - remaining occupancy {{spaceRemainingPerTS[6]}}</option>
+                          <option value="1145">11:45 - remaining occupancy {{spaceRemainingPerTS[7]}}</option>
+                          <option value="1200">12:00 - remaining occupancy {{spaceRemainingPerTS[8]}}</option>
+                          <option value="1215">12:15 - remaining occupancy {{spaceRemainingPerTS[9]}}</option>
+                          <option value="1230">12:30 - remaining occupancy {{spaceRemainingPerTS[10]}}</option>
+                          <option value="1245">12:45 - remaining occupancy {{spaceRemainingPerTS[11]}}</option>
+                          <option value="0100">01:00 - remaining occupancy {{spaceRemainingPerTS[12]}}</option>
+                          <option value="0115">01:15 - remaining occupancy {{spaceRemainingPerTS[13]}}</option>
+                          <option value="0130">01:30 - remaining occupancy {{spaceRemainingPerTS[14]}}</option>
+                          <option value="0145">01:45 - remaining occupancy {{spaceRemainingPerTS[15]}}</option>
+                          <option value="0200">02:00 - remaining occupancy {{spaceRemainingPerTS[16]}}</option>
+                          <option value="0215">02:15 - remaining occupancy {{spaceRemainingPerTS[17]}}</option>
+                          <option value="0230">02:30 - remaining occupancy {{spaceRemainingPerTS[18]}}</option>
+                          <option value="0245">02:45 - remaining occupancy {{spaceRemainingPerTS[19]}}</option>
+                        </select>
+                    </div>
+          <input type="submit" value="SIGNUP">
+        </form>
+        
+      </div>
+    </div>
+  </div>
+    <!-- <div class="container">
+      <div class="row">
+        <a class="navbar-brand" href="#">
+        <img src="../static/psm100_logo.png" width="inherit;" height="inherit;" class="d-inline-block align-top" alt="">
+      </a>
+      </div>
+      <div class = "row">
+        <h2>Registration</h2>
+      </div>
 
       <form class="form-horizontal" name="myform" method="POST">
         <fieldset>
 
-        <!-- Text input-->
+       
         <div class="form-group">
           <label class="col-md-4 control-label" for=""></label>  
           <div class="col-md-4">
@@ -25,7 +91,6 @@
           </div>
         </div>
 
-        <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for=""></label>  
           <div class="col-md-4">
@@ -34,7 +99,6 @@
           </div>
         </div>
 
-        <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for=""></label>  
           <div class="col-md-4">
@@ -43,7 +107,6 @@
           </div>
         </div>
 
-        <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for=""></label>  
           <div class="col-md-4">
@@ -52,7 +115,6 @@
           </div>
         </div>
 
-        <!-- Multiple Radios (inline) -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="numAttending">Number of Family Members Attending</label>
           <div class="col-md-4">
@@ -71,7 +133,6 @@
           </div>
         </div>
 
-        <!-- Select Basic -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="selectbasic">Time Slot</label>
           <div class="col-md-4">
@@ -100,7 +161,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Submit</button>
         {% with messages = get_flashed_messages() %}
            {% if messages %}
               {% for message in messages %}
@@ -110,7 +171,7 @@
         {% endwith %}
         </fieldset>
         </form>
-    </div>
+    </div> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
