@@ -62,8 +62,6 @@ class Person(db.Model):
 		    
 		}
 
-db.create_all()
-
 @app.route('/', methods=["GET", "POST"])
 def index():
 	if request.method == 'POST':
@@ -109,3 +107,8 @@ def done():
 def admin():
 	people = Person.query.all()
 	return render_template('admin.html', allPeople=people)
+
+#RUN THIS TO UPDATE DB SCHEMA
+if __name__ == '__main__':
+	db.create_all()
+	app.run()
